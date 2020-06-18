@@ -10,6 +10,8 @@ This ATAC-Seq Pipeline is a series of shell scripts written to process ATAC-Seq 
 
 3. 
 
+
+
 Resources
 
 bowtie2
