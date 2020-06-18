@@ -2,7 +2,7 @@
 Pipeline for Local ATAC-Seq Processing on Luria Compute Cluster
 Dan Goulet Hemann Lab MIT 2020
 
-This ATAC-Seq Pipeline is a series of shell scripts written to process ATAC-Seq data in a stepwise manner.
+This ATAC-Seq Pipeline is a series of shell scripts written to process ATAC-Seq data in a stepwise manner:
 
 1. align.sh - This script aligns your reads to the genome index located at the filepath designated by the idx variable.
 
