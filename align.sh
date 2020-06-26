@@ -13,7 +13,6 @@ idx="/home/dgoulet/data/Genomes/mm10/Sequence/Bowtie2Index/genome"
 
 #load bowtie2 and samtools packages to cluster
 module add bowtie2/2.3.5.1
-
 module add samtools/1.5
 
 #Use very sensitive alignment then sort reads and output to bamfile
