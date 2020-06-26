@@ -17,4 +17,4 @@ module load samtools/1.5
 samtools view -b  -q 10  -F 4  $I  >  $O
 
 #Output bamfile stats to textfile to check filtering
-samtools flagstat $O > KO1_filter_report.txt
+samtools flagstat $O > ./reports/KO1_filter_report.txt
