@@ -22,6 +22,7 @@ R2="./raw/KO1_mix_S4_R2_001.trim.fastq.gz"
 SAMPLE="S1"
 idx="/home/dgoulet/data/Genomes/mm10/Sequence/Bowtie2Index/genome"
 M="/home/dgoulet/data/Blacklist/mm10_chrM.bed"
+bl="home/dgoulet/data/Blacklist/mm10blacklist.bed"
 
 #make reports directory if it does not already exist
 mkdir -p reports
@@ -70,3 +71,5 @@ touch -m ${SAMPLE}_final.bam.bai
 
 #call peaks in paired-end final bamfile
 macs2 callpeak -f BAMPE -t ${SAMPLE}_final.bam -g mm -n ${SAMPLE} --keep-dup all --outdir ./macs
+
+bedtools intersect -nonamecheck -v -a ./macs/${SAMPLE}_peaks.narrowPeak -b $bl > ./macs/${SAMPLE}_peaks_bl.narrowPeak
